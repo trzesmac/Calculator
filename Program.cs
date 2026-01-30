@@ -1,6 +1,4 @@
-﻿using System;
-
-public class Program
+﻿public class Program
 {
 	static void Main(string[] args)
 	{
@@ -9,7 +7,8 @@ public class Program
 		Console.WriteLine($"10 - 5 = {Substract(25, 5)}");
 		Console.WriteLine($"5 * 5 = {Multiply(25, 5)}");
 		Console.WriteLine($"5 / 5 = {Divide(10, 5)}");
-	}
+        Console.WriteLine($"3 pot 4 = {Power(3, 4)}");
+    }
 	
 	static int Add(int x, int y)
 	{
@@ -29,8 +28,13 @@ public class Program
 	static int Divide(int x, int y)
 	{
 		if(y == 0)
-			throw new DivideByZeroException("Niemozna dzielić przez zero");
+			throw new DivideByZeroException("Nie można dzielić przez zero");
 		
 		return x / y;
 	}
+
+    static double Power(int x, int y)
+    {
+        return Math.Pow(x, y);
+    }
 }
